@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <div className="fixed w-full h-[76px] border-b-[1px] flex flex-row items-center justify-between pt-4 pb-3 px-6">
+    <div className="fixed w-full h-[76px] border-b-[1px] border-[rgba(255,255,255,0.15)] flex flex-row items-center justify-between pt-4 pb-3 px-6">
       <div className="flex flex-col h-[26px] gap-2">
         <div className="flex flex-row h-[26px] gap-2.5">
           <div className="h-[26px] w-5 relative">
