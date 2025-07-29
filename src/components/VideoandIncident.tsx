@@ -1,9 +1,17 @@
 "use client";
 
-import { CalendarDays, Disc, EllipsisVerticalIcon } from "lucide-react";
+import {
+  AlertTriangleIcon,
+  CalendarDays,
+  Disc,
+  DoorOpenIcon,
+  EllipsisVerticalIcon,
+  Plus,
+  UserSearch,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 
-export default function VideoPlayer() {
+export default function VideoandIncident() {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -23,14 +31,18 @@ export default function VideoPlayer() {
   return (
     <section className="flex flex-row gap-6">
       <div className="w-[796px] h-[450px] rounded-[6px] relative">
-        <img src="./camera-1.png" alt="cam1" className="opacity-75" />
+        <img
+          src="./camera-1.png"
+          alt="cam1"
+          className=" w-[796px] h-[450px] opacity-75"
+        />
         <div className="w-[141px] h-[20px] absolute top-[9px] left-2 bg-black rounded flex flex-col gap-1 py-0.5 pr-2 pl-1.5 justify-between">
           <CalendarDays className="w-3 h-3 absolute top-[3px] left-2 text-gray-500" />
           <p className="w-[111px] h-[16px]  absolute top-2 left-6  font-sans font-medium leading-1 text-center text-[10px] tracking-normal">
             {formatTime(time)}
           </p>
         </div>
-        <div className="w-[116px] h-[24px] absolute top-[380px] left-[8px]">
+        <div className="w-[116px] h-[24px] absolute top-[420px] left-[8px]">
           <div className="w-[116px] h-[24px] gap-1 rounded py-0.5 pr-2 pl-[10px] bg-black flex flex-row justify-evenly">
             <Disc className="text-red-500 h-[14px] w-[14px] relative top-[3px] left-[1px] border-[1px] border-[#EF4444]" />
             <p className="text-white w-[82px] h-[20px] text-sm font-semibold font-[inter] text-center leading-5 tracking-normal">
@@ -38,24 +50,8 @@ export default function VideoPlayer() {
             </p>
           </div>
         </div>
-        <div className="flex flex-row w-[253px] h-[84px] absolute top-[320px] left-[535px] gap-[13px] justify-between">
-          <div className="flex flex-col w-[120px]  bg-[#0B0B0B] rounded blur-[5%]">
-            <div className="flex flex-row justify-between py-[3.2px] pr-[4.8px] pl-[6.4px] bg-[#0B0B0B] rounded blur-[5%] shadow">
-              <p className="w-12 h-[10px] font-[Inter] font-normal text-[8px] leading-[9.6px] text-center text-[#D4D4D4]">
-                Camera - 02
-              </p>
-              <EllipsisVerticalIcon className="w-[9.6px] h-[9.6px]" />
-            </div>
 
-            <img
-              src="./camera-2.png"
-              alt="cam-2"
-              className="border-t-[0.8px] border-[rgba(255,255,255,0.25)] rounded-b"
-            />
-          </div>
-        </div>
-
-        <div className="flex flex-row w-[253px] h-[84px] absolute top-[320px] left-[535px] gap-[13px] justify-between">
+        <div className="flex flex-row w-[253px] h-[84px] absolute top-[360px] left-[535px] gap-[13px] justify-between">
           <div className="flex flex-col w-[120px]  bg-[#0B0B0B] rounded blur-[5%]">
             <div className="flex flex-row justify-between py-[3.2px] pr-[4.8px] pl-[6.4px] bg-[#0B0B0B] rounded blur-[5%] shadow">
               <p className="w-12 h-[10px] font-[Inter] font-normal text-[8px] leading-[9.6px] text-center text-[#D4D4D4]">
@@ -84,6 +80,34 @@ export default function VideoPlayer() {
               alt="cam-3"
               className="border-t-[0.8px] border-[rgba(255,255,255,0.25)] rounded-b"
             />
+          </div>
+        </div>
+      </div>
+      <div className="flex w-[796px] h-[450px] rounded-[6px] bg-[#131313]">
+        <div className="flex items-center justify-between w-full px-4 py-4 h-[56px]">
+       
+          <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center h-10 w-10 rounded-full border-2 border-[#450A0A] bg-[#7F1D1D]">
+              <AlertTriangleIcon className="w-6 h-6 text-white" />
+            </div>
+            <div className="text-[#FAFAFA] text-[28px] leading-none font-light tracking-tight">
+              15 Unresolved Incidents
+            </div>
+          </div>
+
+          <div className="flex items-center">
+            <button className="flex items-center justify-center h-8 w-8 rounded-2xl bg-[#431407]">
+              <DoorOpenIcon className="h-4 w-4 text-orange-400" />
+            </button>
+            <button className="flex items-center justify-center h-8 w-8 rounded-2xl bg-[#450A0A]">
+              <Plus className="h-4 w-4 text-red-500" />
+            </button>
+            <button className="flex items-center justify-center h-8 w-8 rounded-2xl bg-[#172554]">
+              <UserSearch className="h-4 w-4 text-[#3B82F6]" />
+            </button>
+            <div>
+              
+            </div>
           </div>
         </div>
       </div>
